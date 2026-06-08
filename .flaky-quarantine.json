@@ -2,14 +2,6 @@
   "version": 1,
   "entries": [
     {
-      "suite": "tests/unit/formatting.test.ts",
-      "testName": "display history (FLAKY: test-order dependency) > should show recently displayed tasks",
-      "addedAt": "2026-06-01T00:00:00Z",
-      "verdict": "flaky",
-      "flakinessScore": 85,
-      "reason": "Manual quarantine to validate filter-junit CI integration"
-    },
-    {
       "suite": "tasks.spec.ts",
       "testName": "Async rendering (FLAKY: element not always present) › should show empty state within 100ms",
       "addedAt": "2026-06-08T15:18:41.433Z",
@@ -24,14 +16,6 @@
       "verdict": "flaky",
       "flakinessScore": 88,
       "reason": "Failed 1/1 runs (flakiness score 88). ui_timing: The test name itself flags 'click before render', and the test uses force:true to click before the form is ready, then asserts visibility with only a 500ms timeout. The element isn't found because the click likely fires before the handler is attached or the list has rendered, and the short timeout doesn't allow the async append to complete."
-    },
-    {
-      "suite": "tests/unit/genuinelyFlaky.test.ts",
-      "testName": "intermittent flake (planted for triager validation) > fails about half the time, no retries",
-      "addedAt": "2026-06-08T15:18:41.433Z",
-      "verdict": "flaky",
-      "flakinessScore": 82,
-      "reason": "Failed 1/1 runs (flakiness score 82). random_data: The test name and message explicitly state this is a planted intermittent flake designed to validate quarantine PR creation, failing about half the time without retries. The 'deterministic' label in the message combined with 'fails about half the time' indicates unseeded randomness or a coin-flip leaking into the assertion."
     }
   ]
 }
