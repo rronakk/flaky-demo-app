@@ -64,3 +64,7 @@ jobs:
           firestore-credentials: ${{ secrets.FIRESTORE_CREDENTIALS }}
           firestore-database-id: flaky
           results-dir: test-results
+          # Lowered to 1 for live un-quarantine validation. Revert to default
+          # (5) once the recoveredPlanted test is removed from quarantine via a
+          # successful flaky-triager/unquarantine PR.
+          un-quarantine-min-passes: '1'
