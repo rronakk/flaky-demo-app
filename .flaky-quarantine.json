@@ -24,6 +24,14 @@
       "verdict": "flaky",
       "flakinessScore": 82,
       "reason": "Failed 1/1 runs (flakiness score 82). random_data: The test name and message explicitly state this is a planted intermittent flake designed to validate quarantine PR creation, failing about half the time without retries. The 'deterministic' label in the message combined with 'fails about half the time' indicates unseeded randomness or a coin-flip leaking into the assertion."
+    },
+    {
+      "suite": "tests/unit/recoveredPlanted.test.ts",
+      "testName": "recovered planted flake (un-quarantine validation) > always passes — was quarantined but recovered",
+      "addedAt": "2026-06-09T12:30:00.000Z",
+      "verdict": "flaky",
+      "flakinessScore": 85,
+      "reason": "Planted entry: simulates a previously-flaky test that has since recovered. Used to validate the un-quarantine recommender end-to-end on real CI."
     }
   ]
 }
