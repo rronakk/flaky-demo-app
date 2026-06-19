@@ -32,6 +32,14 @@
       "verdict": "flaky",
       "flakinessScore": 85,
       "reason": "Planted entry: simulates a previously-flaky test that has since recovered. Used to validate the un-quarantine recommender end-to-end on real CI."
+    },
+    {
+      "suite": "tests/unit/formatting.test.ts",
+      "testName": "display history (FLAKY: test-order dependency) > should show recently displayed tasks",
+      "addedAt": "2026-06-09T15:38:54.897Z",
+      "verdict": "flaky",
+      "flakinessScore": 82,
+      "reason": "Failed 3/3 runs (flakiness score 82). test_order_dependency: The test name explicitly labels it as 'FLAKY: test-order dependency', and the failure shows an empty array where 'Task A' was expected. This indicates the test relies on state (recently displayed tasks history) populated by a prior test rather than seeding its own data."
     }
   ]
 }
